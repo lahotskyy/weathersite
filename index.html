@@ -2,20 +2,88 @@
 <html>
     <head>
         <title>Weather Forecast</title>
+        <meta charset="UTF-8">
+        <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/css/styles.css" type="text/css" />
-        <script src='//code.jquery.com/jquery-2.1.1.min.js'></script>
+        
     </head>
+    
     <body>
         <header>
-            <div id="logo">
-               <img src="/images/pic_html5.png"></img>
-            </div>
             <div>
-                <label for="search" type="text">Search</label>
-                <
+                <img src="/images/planet.gif" alt="Site logo Planet"></img>
             </div>
-           
+            <div id="site-title">
+                <p>Weather Forecast</p>
+            </div>
+            <!--
+             <form>
+            <label for="cityName">Enter city name:</label>
+            <input id="inputCityName" type="text" name="cityName"/>
+            <input type="button" id="btnGetWeather" value="Get Weather"/>
+        </form>
+            -->
+            
+            <form id="search">
+                <input type="text" id="inputCityName" name="cityName" placeholder="Search city" />
+                <input type="button" id="btnGetWeather" id="btn-search" value="Search">
+            </form>
         </header>
 
+        <nav class="main-nav">
+            <ul>
+                <li><a href="">Today</a></li>
+                <li><a href="">Hourly</a></li>
+                <li><a href="">5 day</a></li>
+                <li><a href="">16 day</a></li>
+            </ul>
+        </nav>
+        <section id="city">
+            <div>
+                <p>City: <span id="location" ></span></p>
+            </div>
+        </section>
+        <aside id="all">
+            <div class="days"> <p> Day: <span class="day" ></span></p></div>
+            <div class="temperatures"> <p><span class="temperature" ></span></p></div>
+            <div class="conditions"> <p><span class="condition" ></span></p></div>
+            <div class="icons"> <p><span class="icon" ></span></p></div>
+            <div class="winds"> <p>Wind: <span class="wind" ></span></p></div>
+            <div class="Humiditys"> <p>Humidity: <span class="Humidity" ></span></p></div>
+        </aside>
+        <section id="weatherSection">
+            <table id="weatherTable">
+                <tr>
+                    <th>Day</th>
+                    <th>Temperature/Day</th>
+                    <th>Temperature/Night</th>
+                    <th>Condition</th>
+                    <th class="icons">Icon</th>
+                    <th>Wind</th>
+                    <th>Humidity</th>
+                </tr>
+            </table>
+
+        <p id="error"></p>
+        </section>
+        
+        <footer>
+            <p>&#169; <span id="date"><script src="scripts/year.js"></script></span>, Lahotskyy</p>
+        </footer>
+
+
+
+
+
+
+
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+    <script src="scripts/weatherByCity.js"></script>
+    <script src="scripts/weatherService.js"></script> 
+    <script src="scripts/script.js"></script>  
+    
+    
     </body>
 </html>
