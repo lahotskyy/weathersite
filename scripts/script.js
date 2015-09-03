@@ -1,5 +1,5 @@
 $(function(){
-    $('#today').click(function () {
+    $('#btnGetWeather').click(function () {
         getWeatherByCity('ua', dataReceived, showError, $('#inputCityName').val());
     });
    
