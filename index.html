@@ -16,23 +16,15 @@
             <div id="site-title">
                 <p>Weather Forecast</p>
             </div>
-            <!--
-             <form>
-            <label for="cityName">Enter city name:</label>
-            <input id="inputCityName" type="text" name="cityName"/>
-            <input type="button" id="btnGetWeather" value="Get Weather"/>
-        </form>
-            -->
-            
             <form id="search">
                 <input type="text" id="inputCityName" name="cityName" placeholder="Search city" />
-                <input type="button" id="btnGetWeather" id="btn-search" value="Search">
+                <input type="button" id="btnGetWeather" value="Search">
             </form>
         </header>
 
         <nav class="main-nav">
             <ul>
-                <li><a href="">Today</a></li>
+                <li id="today"><a href="">Today</a></li>
                 <li><a href="">Hourly</a></li>
                 <li><a href="">5 day</a></li>
                 <li><a href="">16 day</a></li>
@@ -43,9 +35,9 @@
                 <p>City: <span id="location" ></span></p>
             </div>
         </section>
-        <aside id="all">
-            <div class="days"> <p> Day: <span class="day" ></span></p></div>
-            <div class="temperatures"> <p><span class="temperature" ></span></p></div>
+        <aside id=now" class="now-center">
+            <div class="days"> <p> Day: <span id="day" ></span></p></div>
+            <div class="temperatures"> <p><span id="temperature" ></span></p></div>
             <div class="conditions"> <p><span class="condition" ></span></p></div>
             <div class="icons"> <p><span class="icon" ></span></p></div>
             <div class="winds"> <p>Wind: <span class="wind" ></span></p></div>
@@ -55,10 +47,10 @@
             <table id="weatherTable">
                 <tr>
                     <th>Day</th>
-                    <th>Temperature/Day</th>
-                    <th>Temperature/Night</th>
+                    <th>Temperature<br/>Day</th>
+                    <th>Temperature<br/>Night</th>
                     <th>Condition</th>
-                    <th class="icons">Icon</th>
+                    <th>Icon</th>
                     <th>Wind</th>
                     <th>Humidity</th>
                 </tr>
@@ -76,14 +68,14 @@
 
 
 
-
     
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
     <script src="scripts/weatherByCity.js"></script>
     <script src="scripts/weatherService.js"></script> 
     <script src="scripts/script.js"></script>  
-    
-    
+    <script src="scripts/no.js"></script>  
+
+
     </body>
 </html>

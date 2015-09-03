@@ -1,5 +1,7 @@
+// JavaScript File
+
 $(function(){
-    $('#today').click(function () {
+    $('#btnGetWeather').click(function () {
         getWeatherByCity('ua', dataReceived, showError, $('#inputCityName').val());
     });
    
@@ -23,6 +25,8 @@ $(function(){
                 this.weather[0].description,
                 Math.round(this.temp.day) + '&deg;C',
                 Math.round(this.temp.night) + '&deg;C',
+                Math.round(this.temp.eve) + '&deg;C',
+                Math.round(this.temp.morn) + '&deg;C',
                 this.humidity + '%',
                 Math.round(this.speed) + 'm/s'
             );
@@ -30,7 +34,7 @@ $(function(){
         $('#location').html(city + ', <b>' + country + '</b>'); // Додаємо локацію на сторінку
     }
 
-    function addWeather(icon, day, condition, tempd, tempn, humidity, speed){
+    function addWeather(icon, day, condition, tempd, tempn, tempe, tempm, humidity, speed){
         var markup = '<tr>'+
                 '<td>' + day + '</td>' +
                 '<td>' + tempd + '</td>' +
@@ -43,6 +47,7 @@ $(function(){
                 '<td>' + humidity + '</td>'
             + '</tr>';
         weatherTable.insertRow(-1).innerHTML = markup; // Додаємо рядок до таблиці
+     
     }
 
     function showError(msg){
